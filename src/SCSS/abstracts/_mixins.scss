@@ -1,0 +1,85 @@
+@import '../abstracts/_colors';
+@import '../abstracts/variable';
+
+@mixin ahref {
+    text-decoration: none;
+    color: $main-color;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    padding: 7px 12px;
+    display: inline-block;
+}
+@mixin h3text {
+    font-size: 24px;
+    color: $main-color;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+
+
+@mixin responsive_320_374() {
+    @media #{$size_320} {
+        @content;
+    }
+}
+@mixin responsive_375_424() {
+    @media #{$size_375} {
+        @content;
+    }
+}
+@mixin responsive_425_767() {
+    @media #{$size_425} {
+        @content;
+    }
+}
+@mixin responsive_768_991() {
+    @media #{$size_768} {
+        @content;
+    }
+}
+@mixin responsive_992_1023() {
+    @media #{$size_992} {
+        @content;
+    }
+}
+@mixin responsive_1024_1199() {
+    @media #{$size_1024} {
+        @content;
+    }
+}
+@mixin responsive_1200() {
+    @media #{$size_1200} {
+        @content;
+    }
+}
+@mixin responsive_somefix_1301() {
+    @media #{$size_1301} {
+        @content;
+    }
+}
+@mixin responsive_somefix_1301_1500() {
+    @media #{$size_1301_1500} {
+        @content;
+    }
+}
+@mixin responsive_fix_header() {
+    @media #{$fix_header_res} {
+        @content;
+    }
+}
+@mixin responsive_1301() {
+    @media #{$size_1301} {
+        @content;
+    }
+}
+@mixin responsive_1301_1400() {
+    @media #{$size_1301_1400} {
+        @content;
+    }
+}
+@mixin responsive_500_767() {
+    @media #{$fix_login_500_767} {
+        @content;
+    }
+}

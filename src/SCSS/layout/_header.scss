@@ -1,0 +1,317 @@
+@import '../base/_reset';
+@import '../abstracts/_colors';
+@import '../abstracts/mixins';
+
+.header{
+    
+    
+    .head-top{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px 0 5px;
+        width: 75%;
+
+        @include responsive_375_424(){
+            width: 100%;
+            flex-direction: row-reverse;
+            background-color: $main-color;
+            padding: 10px;
+        }
+        @include responsive_768_991(){
+            width: 100%;
+            flex-direction: row-reverse;
+            background-color: $main-color;
+            padding: 10px;
+        }
+        .menu-an{
+            display: none;
+
+            @include responsive_375_424(){
+                display: block;
+            }
+            @include responsive_768_991(){
+                display: block;
+            }
+            .me-an {
+                width: 30px;
+                height: 5px;
+                background-color: white;
+                margin: 6px 0;
+                border-radius: 5px;
+            }
+        }
+        .head-delivery{ 
+            width: 20%;
+
+            @include responsive_375_424(){
+                width: 30%;
+            }
+            @include responsive_768_991(){
+                width: 30%;
+            }
+
+            img{
+                @include responsive_375_424(){
+                    width: 100%;
+                }
+                @include responsive_768_991(){
+                    width: 100%;
+                }
+            }
+
+        }
+        .head-logo{
+            width: 50%;
+            text-align: center;
+            /* animation: my 6000ms infinite; */
+            @include responsive_375_424(){
+                width: 60%;
+                padding-left: 60px;
+            }
+            @include responsive_768_991(){
+                width: 60%;
+                padding-left: 100px;
+            }
+
+            img{
+                @include responsive_375_424(){
+                    background-color: white;
+                }
+                @include responsive_768_991(){
+                    background-color: white;
+                }
+            }
+        }
+        .head-right{
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            @include responsive_375_424(){
+                display: none;
+            }
+            @include responsive_768_991(){
+                display: none;
+            }
+
+            .head-login{
+                
+                a{
+                    color: black;
+                    font-weight: bold;
+                    padding: 0 10px;
+                }
+            }
+            .vn-en{
+                margin-right: 10px;
+
+                a{
+                    color: $main-color;
+
+                    &:first-child{
+                        font-weight: bold;
+                    }
+                }
+            }
+            .head-cart{
+                border: 1px solid $main-color;
+                border-radius: 5px;
+                padding: 7px 10px 5px 10px;
+
+                
+                a{
+                    color: $main-color;
+                }
+                #head-cart-zero{
+                    background-color: $main-color;
+                    color: white;
+                    font-size: 6px;
+                    padding: 2px 4px;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 12.8%;
+                    top: 25%;
+                }
+                &:hover .head-cart-form{
+                    display: block;
+                }
+                .head-cart-form{
+                    position: absolute;
+                    margin-top: 7px;
+                    right: 13%;
+                    padding: 20px 30px;
+                    background-color: white;
+                    box-shadow: 1px 5px 8px #ccc;
+                    display: none;
+                  
+                    .head-cart-top{
+                        padding: 20px 0;
+
+                        a{
+                            @include ahref;
+                            margin-left: 30px;
+
+                            &:hover{
+                                color: white;
+                                background-color: $main-color;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                    .head-cart-middle{
+                        padding: 20px 0;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: bold;
+
+                        span{
+                            font-size: 24px;
+                            color: red;
+                            font-weight: normal;
+                        }
+                    }
+                    .head-cart-bottom{
+                        
+                        a{
+                            @include ahref;
+                            padding: 15px 80px;
+
+                            &:hover{
+                                color: white;
+                                background-color: $main-color;
+                                transition: 0.5s;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .head-menu{
+        border-top: 3px solid rgb(243, 243, 243);
+        box-shadow: 1px 2px 3px #ccc;
+
+        @include responsive_375_424(){
+            display: none;
+        }
+        @include responsive_768_991(){
+            display: none;
+        }
+
+        #head-menu-p{
+            padding-left: 0;
+            
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            width: 75%;
+            margin: 0 auto;
+            justify-content: space-between;
+            @include responsive_375_424(){
+                flex-direction: column; 
+                justify-content: flex-start;  
+                width: 80%;
+                background-color: white;
+                position: absolute;
+                height: 100vh;
+                left: 0;    
+                }
+            @include responsive_768_991(){
+                flex-direction: column; 
+                justify-content: flex-start;  
+                width: 40%;
+                background-color: white;
+                position: absolute;
+                height: 100vh;
+                left: 0;    
+                }
+            li{
+                
+                text-align: center;
+                padding: 10px 15px;
+                @include responsive_375_424(){
+                    text-align: start;
+                    border-bottom: 1px solid gray;
+                    padding: 10px 10px;
+                }
+                @include responsive_768_991(){
+                    text-align: start;
+                    border-bottom: 1px solid gray;
+                    padding: 10px 10px;
+                }
+                &#lg-hide{
+                    display: none;
+                    @include responsive_375_424(){
+                        display: block;
+                    }
+                    @include responsive_768_991(){
+                        display: block;
+                    }
+                }
+                #active-menu{
+                    color: $main-color;
+                }
+                a{
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: $menu-color;
+
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
+
+                .head-menu-con{
+                    position: absolute;
+                    margin-top: 11px;
+                    width: 250px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    box-shadow: 1px 2px 3px #ccc;
+                    display: none;
+                    background-color: white;
+                    z-index: 10;
+                    padding-left: 40px;
+                    margin-left: -20px;
+                    @include responsive_375_424(){
+                        height: 200px;
+                        position: initial;
+                    }
+                    @include responsive_768_991(){
+                        height: 200px;
+                        position: initial;
+                    }
+                
+                    li{      
+                        text-align: left;
+                        width: 80%;
+
+                        a{
+                            font-weight: normal;
+                            color: black;
+                        }
+
+                        &:hover{
+                            background-color: $main-color;
+                            transition: 0.5s;
+
+                            a{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                &:hover .head-menu-con{
+                    display: block;
+                }
+            }
+        }
+    }
+}

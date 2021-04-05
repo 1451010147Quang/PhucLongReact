@@ -1,0 +1,170 @@
+@import '../base/_reset';
+@import '../abstracts/_colors';
+@import '../abstracts/mixins';
+
+.footer{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width: 75%;
+    padding: 35px 0 30px;
+
+    @include responsive_375_424(){
+        flex-direction: column;
+        width: 90%;
+    }
+    @include responsive_768_991(){
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .col-6{
+
+        @include responsive_375_424(){
+            width: 100%;
+        }
+        @include responsive_768_991(){
+            width: 100%;
+        }
+
+        span{
+            font-weight: bold;
+        }
+    }
+    .col-4{
+        padding: 0 20px;
+
+        @include responsive_375_424(){
+            width: 100%;
+            padding: 10px 0;
+        }
+        @include responsive_768_991(){
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        span{
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+
+            @include responsive_375_424(){
+                font-size: 18px;
+            }
+            @include responsive_768_991(){
+                font-size: 18px;
+            }
+        }
+
+        form{
+            #footer-form{
+                padding: 7px;
+                border-radius: 5px;
+                border: 1px solid $main-color;
+                color: black;
+                outline: none;
+            }
+            #footer-btn{
+                @include ahref;
+                background-color: white;
+                cursor: pointer;
+
+                &:hover{
+                    color: white;
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+    .col-2{
+
+        @include responsive_375_424(){
+            width: 100%;
+        }
+        @include responsive_768_991(){
+            width: 100%;
+        }
+
+        .vn-en{
+            text-align: end;
+
+            @include responsive_375_424(){
+                text-align: start;
+            }
+            @include responsive_768_991(){
+                text-align: start;
+            }
+
+            a:first-child{
+                font-weight: bold;
+                color: $main-color;
+            }
+        }
+
+        a{
+            img{
+                width: 100%;
+                @include responsive_375_424(){
+                    width: 100%;
+                }
+
+                @include responsive_768_991(){
+                    width: 60%;
+                }
+            }
+        }
+        ul{
+            display: flex;
+            flex-wrap: nowrap;
+
+            @include responsive_375_424(){
+                justify-content: flex-end;
+            }
+            @include responsive_768_991(){
+                justify-content: flex-end;
+            }
+            
+            li{
+                width: 30%;
+                padding: 0px 0 0 10px;
+
+                @include responsive_375_424(){
+                    width: 10%;
+                }
+                @include responsive_768_991(){
+                    width: 10%;
+                }
+
+                i{
+                    font-size: 20px;
+                    color: $menu-color;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: black;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.copy-right{
+    font-size: 0.7em;
+    line-height: 1.6;
+    padding: 2px 15px 3px;
+    color: #8d8d8d;
+    background-color: black;
+    text-align: center;
+
+    @include responsive_375_424(){
+        padding: 5px 15px 5px;
+    }
+
+    p{
+        @include responsive_375_424(){
+            font-size: 12px;
+        }
+    }
+}

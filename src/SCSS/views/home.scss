@@ -1,0 +1,54 @@
+@import "../base/_reset";
+@import "../abstracts/_colors";
+@import "../abstracts/_mixins";
+@import "../layout/header";
+@import "../layout/footer";
+
+.information {
+  background: url("../../img/coffeecopy.png") no-repeat;
+  background-position: right bottom;
+  padding: 100px 0 80px;
+
+  .info-main {
+    /* align-items: center; */
+    .info-left {
+      img {
+        max-width: 530px;
+        border: 5px solid #fff;
+      }
+    }
+
+    .info-right {
+      .h3text {
+        @include h3text;
+      }
+      .ptext {
+        margin: 20px 0;
+        line-height: 1.25;
+      }
+      .atext {
+        @include ahref;
+
+        &:hover {
+          color: white;
+          background-color: $main-color;
+          transition: 0.5s;
+        }
+      }
+    }
+    .info-bottom {
+      padding-right: 100px;
+
+      img {
+        max-width: 320px;
+        border: 5px solid white;
+      }
+    }
+
+    &:first-child {
+      margin-bottom: 130px;
+    }
+  }
+}
+
+
